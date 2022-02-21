@@ -25,7 +25,6 @@ describe("knft Contract", async () => {
   it("Should have a name", async () => {
     // Returns the name of the token
     const name = await nft.collectionName;
-    console.log(name, "name console");
 
     // assert.equal(name, "knft");
   });
@@ -34,7 +33,6 @@ describe("knft Contract", async () => {
   it("Should have a symbol", async () => {
     // Returns the symbol of the token
     const symbol = await nft.collectionSymbol;
-    console.log(symbol, "symbol console");
 
     // assert.equal(symbol, "knft");
   });
@@ -49,7 +47,6 @@ describe("knft Contract", async () => {
     let event = tx.events[0];
     let value = event.args[2];
     tokenId = value.toNumber();
-    console.log(tokenId, "tokenID console");
 
     assert.equal(tokenId, 0);
 
@@ -63,6 +60,5 @@ describe("knft Contract", async () => {
     tokenId = value.toNumber();
 
     assert.equal(tokenId, 1);
-    console.log(tokenId, "tokenID console2");
   });
 });
